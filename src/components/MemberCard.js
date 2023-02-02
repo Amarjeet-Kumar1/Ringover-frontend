@@ -9,8 +9,8 @@ export default function MemberCard(props) {
         <img src={`/images/members/${imgUrl}`} alt={name} />
       </div>
       <div className="member-details">
-        <h4>{name}</h4>
-        <h6>{position}</h6>
+        <p className="member-name">{name}</p>
+        <p className="member-position">{position}</p>
       </div>
       <div className="member-socials">
         {socials.map((social) => (

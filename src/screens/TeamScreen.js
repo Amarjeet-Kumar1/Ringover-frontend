@@ -1,5 +1,6 @@
 import React from 'react';
 import MemberCard from '../components/MemberCard';
+import './TeamScreen.css';
 
 export default function TeamScreen() {
   return (
@@ -18,7 +19,7 @@ export default function TeamScreen() {
           socials={['linkedin', 'medium', 'facebook']}
         />
         <MemberCard
-          name="Tony Kroos"
+          name="Toni Kroos"
           position="Product Developer"
           imgUrl="tonikroos.jpg"
           socials={['linkedin', 'medium']}
@@ -42,8 +43,8 @@ export default function TeamScreen() {
           socials={['linkedin', 'facebook']}
         />
       </div>
-      <div id="team-message-bootm">
-        <p>and YOU! ;)</p>
+      <div id="team-message-bottom">
+        <p>and You! ;)</p>
       </div>
     </div>
   );

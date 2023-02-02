@@ -1,3 +1,7 @@
+p {
+  margin: 0;
+  font-size: medium;
+}
 #header {
   width: 100%;
   height: 7vh;
@@ -14,10 +18,17 @@
 #logo-container {
   width: 20%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+#logo-image {
+  width: 30%;
+  height: 100%;
 }
 #logo-image img {
-  width: 30%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 #nav-container {
   width: 60%;
@@ -29,4 +40,7 @@
 #profile-container {
   width: 20%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
