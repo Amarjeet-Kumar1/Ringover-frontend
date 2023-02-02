@@ -3,7 +3,9 @@ p {
 }
 .member-card {
   width: 15%;
-  height: 80%;
+  /* height: 80%; */
+  min-width: 150px;
+  height: 250px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .member-image {

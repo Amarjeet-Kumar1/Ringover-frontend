@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 #team-message-top {
   margin-top: 10vh;
