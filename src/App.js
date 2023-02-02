@@ -1,5 +1,6 @@
 import './App.css';
 import NavHeader from './components/NavHeader';
+import TeamScreen from './screens/TeamScreen';
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <header>
         <NavHeader />
       </header>
-      <body></body>
+      <main>
+        <TeamScreen />
+      </main>
     </div>
   );
 }

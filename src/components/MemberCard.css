@@ -1,0 +1,36 @@
+.member-card {
+  width: 15%;
+  height: 80%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.member-image {
+  object-fit: fill;
+  width: 100%;
+  height: 60%;
+}
+.member-image img {
+  width: 100%;
+  height: 100%;
+}
+.member-details {
+  height: 20%;
+  margin-top: 10%;
+}
+.member-details h4,
+h6 {
+  margin: 0;
+}
+.member-socials {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.socials-image {
+  width: 10%;
+  object-fit: fill;
+}
+.socials-image img {
+  width: 100%;
+}
