@@ -1,6 +1,6 @@
 import React from 'react';
 import CartSide from '../components/store/CartSide';
-import CatalogMiddle from '../components/store/CatalogMiddle';
+import CatalogMiddle from '../components/store/CatalogueMiddle';
 import FilterSide from '../components/store/FilterSide';
 import ProductDetails from '../components/store/ProductDetails';
 
