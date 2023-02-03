@@ -2,6 +2,7 @@ import './App.css';
 import NavHeader from './components/NavHeader';
 import ContactScreen from './screens/ContactScreen';
 import JourneyScreen from './screens/JourneyScreen';
+import StoreScreen from './screens/StoreScreen';
 import TeamScreen from './screens/TeamScreen';
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <main>
         {/* <TeamScreen /> */}
         {/* <ContactScreen /> */}
-        <JourneyScreen />
+        {/* <JourneyScreen /> */}
+        <StoreScreen />
       </main>
     </div>
   );
