@@ -28,7 +28,10 @@ export default function NavHeader() {
           </div>
         </div>
         <div id="profile-container">
-          <div>
+          <div id="user">
+            <p>
+              <i className="fa fa-user-o"></i>
+            </p>
             <p>GAGAN</p>
           </div>
         </div>

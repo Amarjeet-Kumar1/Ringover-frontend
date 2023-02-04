@@ -44,3 +44,8 @@ p {
   align-items: center;
   justify-content: right;
 }
+#user {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+}

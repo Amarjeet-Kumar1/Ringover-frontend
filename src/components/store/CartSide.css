@@ -29,7 +29,7 @@
   overflow: auto;
   position: relative;
 }
-#cart-main p {
+#empty-cart {
   width: 100%;
   position: absolute;
   top: 50%;

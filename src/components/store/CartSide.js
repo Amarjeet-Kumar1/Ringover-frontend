@@ -1,4 +1,5 @@
 import React from 'react';
+import CartItem from './CartItem';
 import './CartSide.css';
 
 export default function CartSide() {
@@ -14,7 +15,8 @@ export default function CartSide() {
           </div>
         </div>
         <div id="cart-main">
-          <p>What's stopping you, designer? </p>
+          <CartItem />
+          {/* <p id='empty-cart'>What's stopping you, designer? </p> */}
         </div>
         <div id="cart-bottom-icon">
           <div id="home-location">
