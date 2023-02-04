@@ -1,5 +1,7 @@
 import React from 'react';
+import data from '../../data';
 import './CatalogueMiddle.css';
+import Product from './Product';
 
 export default function CatalogueMiddle() {
   return (
@@ -11,14 +13,18 @@ export default function CatalogueMiddle() {
           </div>
           <div id="catalogue-icons">
             <div>
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
             </div>
             <div>
               <button>sort by</button>
             </div>
           </div>
         </div>
-        <div id="catalogue-main"></div>
+        <div id="catalogue-main">
+          {data.product.map((product, index) => (
+            <Product product={product} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
