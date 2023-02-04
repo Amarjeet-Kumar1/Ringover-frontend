@@ -9,9 +9,9 @@ import './StoreScreen.css';
 export default function StoreScreen() {
   return (
     <div id="store-screen">
-      <FilterSide />
-      <CatalogMiddle />
-      {/* <ProductDetails /> */}
+      {/* <FilterSide />
+      <CatalogMiddle /> */}
+      <ProductDetails />
       <CartSide />
     </div>
   );
