@@ -1,14 +1,18 @@
-import React from 'react';
-import data from '../../data';
+import React, { useContext } from 'react';
+import { Store } from '../../Store';
 import './CartItem.css';
 
-export default function CartItem() {
-  const product = data.product[0];
+export default function CartItem(props) {
+  const { product } = props;
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const removeItem = async () => {
+    ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: product });
+  };
   return (
-    <div className="product-cart">
+    <div className="product-cart" key={product.id}>
       <div className="product-cart-image">
         <img src={product.imgUrl} alt={product.name} />
-        <span className="cross">
+        <span className="cross" onClick={removeItem}>
           <i className="fa fa-times-circle-o"></i>
         </span>
       </div>

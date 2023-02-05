@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 
 export default function Product(props) {
@@ -6,7 +7,9 @@ export default function Product(props) {
   return (
     <div className="product-container">
       <div className="product-image">
-        <img src={product.imgUrl} alt={product.name} />
+        <Link to={`/store?id=${product.id}`}>
+          <img src={product.imgUrl} alt={product.name} />
+        </Link>
       </div>
       <div className="product-name">
         <p>{product.name}</p>

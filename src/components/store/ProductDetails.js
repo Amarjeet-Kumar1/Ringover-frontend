@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ProductDetails.css';
-import data from '../../data';
 import Rating from '../Rating';
+import { Link } from 'react-router-dom';
+import { Store } from '../../Store';
 
 export default function ProductDetails(props) {
-  const product = data.product[0];
+  const { product } = props;
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const addCartHandler = async () => {
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product },
+    });
+  };
   return (
     <div id="product-details">
       <div id="product-details-container">
         <div id="product-heading-container">
           <p>
-            <i className="fa fa-angle-left "></i>
+            <Link to="/store">
+              <i className="fa fa-angle-left "></i>
+            </Link>
           </p>
 
           <p>your design space</p>
@@ -21,7 +31,7 @@ export default function ProductDetails(props) {
           </div>
           <div id="product-sub-image">
             {[1, 2, 3].map((n) => (
-              <div className="product-image" key={n}>
+              <div className="product-images" key={n}>
                 <img src={product.imgUrl} alt={product.name} />
               </div>
             ))}
@@ -74,8 +84,10 @@ export default function ProductDetails(props) {
           <Rating rating="0" />
         </div>
         <div id="details-buttons">
-          <button>share design</button>
-          <button className="black">add to cart</button>
+          <button className="clickable">share design</button>
+          <button className="black clickable" onClick={addCartHandler}>
+            add to cart
+          </button>
         </div>
       </div>
     </div>
