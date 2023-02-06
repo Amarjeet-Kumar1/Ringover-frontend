@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Store } from '../../Store';
 import CartItem from './CartItem';
 import './CartSide.css';
 
 export default function CartSide() {
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state } = useContext(Store);
   const {
     cart: { cartItems },
   } = state;

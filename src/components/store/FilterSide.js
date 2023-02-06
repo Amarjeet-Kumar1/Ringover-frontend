@@ -1,7 +1,37 @@
 import React from 'react';
+import data from '../../data';
 import './FilterSide.css';
 
-export default function FilterSide() {
+export default function FilterSide(props) {
+  const { setProducts } = props;
+  const onlyOne = (checkbox) => {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((item) => {
+      if (item !== checkbox) item.checked = false;
+    });
+  };
+  const clickHandler = () => {
+    var markedCheckbox = document.querySelectorAll(
+      'input[type="checkbox"]:checked'
+    );
+    if (markedCheckbox.length > 0) {
+      var product;
+      if (markedCheckbox[0].name === 'cost') {
+        if (markedCheckbox[0].value === '1') {
+          product = data.product.filter((one) => one.price <= 4000);
+        } else {
+          product = data.product.filter((one) => one.price > 4000);
+        }
+      } else {
+        if (markedCheckbox[0].value === 'loafer') {
+          product = data.product.filter((one) => one.type === 'loafer');
+        } else {
+          product = data.product.filter((one) => one.type === 'sneaker');
+        }
+      }
+      setProducts(product);
+    }
+  };
   return (
     <div id="filter-side">
       <div id="filter-side-container">
@@ -18,16 +48,34 @@ export default function FilterSide() {
             <p>Cost</p>
 
             <div>
-              <input type="checkbox" id="cost1" name="cost1" />
+              <input
+                type="checkbox"
+                id="cost1"
+                name="cost"
+                value="1"
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="cost1">Rs. 1500-4000</label>
             </div>
 
             <div>
-              <input type="checkbox" id="cost2" name="cost2" />
+              <input
+                type="checkbox"
+                id="cost2"
+                name="cost"
+                value="2"
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="cost2">Rs. 4001-7000</label>
             </div>
             <div>
-              <input type="checkbox" id="cost3" name="cost3" />
+              <input
+                type="checkbox"
+                id="cost3"
+                name="cost"
+                disabled
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="cost3">Rs. 7000+</label>
             </div>
           </div>
@@ -63,16 +111,34 @@ export default function FilterSide() {
             <p>Design templates</p>
 
             <div>
-              <input type="checkbox" id="design1" name="design1" />
+              <input
+                type="checkbox"
+                id="design1"
+                name="design"
+                disabled
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="design1">2</label>
             </div>
 
             <div>
-              <input type="checkbox" id="design2" name="design2" />
+              <input
+                type="checkbox"
+                id="design2"
+                name="design"
+                disabled
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="design2">3</label>
             </div>
             <div>
-              <input type="checkbox" id="design3" name="design3" />
+              <input
+                type="checkbox"
+                id="design3"
+                name="design"
+                disabled
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="design3">3+</label>
             </div>
           </div>
@@ -80,18 +146,30 @@ export default function FilterSide() {
             <p>Type</p>
 
             <div>
-              <input type="checkbox" id="type1" name="type1" />
+              <input
+                type="checkbox"
+                id="type1"
+                name="type"
+                value="loafer"
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="type1">Loafers</label>
             </div>
 
             <div>
-              <input type="checkbox" id="type2" name="type2" />
+              <input
+                type="checkbox"
+                id="type2"
+                name="type"
+                value="sneaker"
+                onClick={(e) => onlyOne(e.target)}
+              />
               <label htmlFor="type2">Sneakers</label>
             </div>
           </div>
         </div>
         <div id="filter-button">
-          <button>apply</button>
+          <button onClick={clickHandler}>apply</button>
         </div>
       </div>
     </div>

@@ -1,22 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import CartSide from '../components/store/CartSide';
 import CatalogMiddle from '../components/store/CatalogueMiddle';
 import FilterSide from '../components/store/FilterSide';
 import ProductDetails from '../components/store/ProductDetails';
 import data from '../data';
-import { Store } from '../Store';
 import './StoreScreen.css';
 
 export default function StoreScreen() {
   const [queryParameters] = useSearchParams();
   const [product, setProduct] = useState({});
-  // const {state, dispatch: ctxDispatch} = useContext(Store);
-  // const {
-  //   cart: {
-  //     cartItems
-  //   }
-  // } = state;
+  const [products, setProducts] = useState([...data.product]);
+
   useEffect(() => {
     const fetchData = () => {
       if (queryParameters.has('id')) {
@@ -36,8 +31,8 @@ export default function StoreScreen() {
         <ProductDetails product={product} />
       ) : (
         <>
-          <FilterSide />
-          <CatalogMiddle />
+          <FilterSide setProducts={setProducts} />
+          <CatalogMiddle products={products} />
         </>
       )}
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import data from '../../data';
 import './CatalogueMiddle.css';
 import Product from './Product';
 
-export default function CatalogueMiddle() {
+export default function CatalogueMiddle(props) {
+  const { products } = props;
   return (
     <div id="catalogue-middle">
       <div id="catalogue-container">
@@ -21,7 +21,7 @@ export default function CatalogueMiddle() {
           </div>
         </div>
         <div id="catalogue-main">
-          {data.product.map((product, index) => (
+          {products.map((product, index) => (
             <Product product={product} key={index} />
           ))}
         </div>
