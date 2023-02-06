@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.96cb4b0d.css",
-    "main.js": "/static/js/main.89114235.js",
-    "static/media/Product_Sans.ttf": "/static/media/Product_Sans.863727019c4716c4dc24.ttf",
-    "static/media/Gobold_Regular.otf": "/static/media/Gobold_Regular.5576dd47e1aa896baaf9.otf",
-    "index.html": "/index.html",
-    "main.96cb4b0d.css.map": "/static/css/main.96cb4b0d.css.map",
-    "main.89114235.js.map": "/static/js/main.89114235.js.map"
+    "main.css": "/Ringover-frontend/static/css/main.aaa0cd16.css",
+    "main.js": "/Ringover-frontend/static/js/main.89114235.js",
+    "static/media/Product_Sans.ttf": "/Ringover-frontend/static/media/Product_Sans.863727019c4716c4dc24.ttf",
+    "static/media/Gobold_Regular.otf": "/Ringover-frontend/static/media/Gobold_Regular.5576dd47e1aa896baaf9.otf",
+    "index.html": "/Ringover-frontend/index.html",
+    "main.aaa0cd16.css.map": "/Ringover-frontend/static/css/main.aaa0cd16.css.map",
+    "main.89114235.js.map": "/Ringover-frontend/static/js/main.89114235.js.map"
   },
   "entrypoints": [
-    "static/css/main.96cb4b0d.css",
+    "static/css/main.aaa0cd16.css",
     "static/js/main.89114235.js"
   ]
 }
